@@ -10,7 +10,7 @@ function sala(){
         document.getElementById("estado_sala").value="0";
         document.getElementById("sala").innerHTML="<div class='sala_desligado'></div>";
         document.getElementById("botao-sala").innerHTML="<a href='/?ligar_sala' class='botao'>Liga</a>";
-    }
+    }console.log("Desligado");
 }
 
 function banheiro1(){
