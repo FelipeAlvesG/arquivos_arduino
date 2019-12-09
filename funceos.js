@@ -1,21 +1,25 @@
 function sala(){
-	var estado_sala = document.getElementById("estado_sala").value;
-    if(estado_sala === 0){
-        document.getElementById("estado_sala").value=0;
-        document.getElementById("sala").innerHTML="<div class='sala_ligado'></div>";
-        document.getElementById("botao-sala").innerHTML="<a href='/?desligar_sala' class='botao'>Desliga</a>";
-	    
-    } else {
-        document.getElementById("estado_sala").value=1;
+    // var estado_sala = document.getElementById("estado_sala").innerHTML;
+    // if(estado_sala === "0"){
+        // document.getElementById("estado_sala").innerHTML="0";
+        // document.getElementById("sala").innerHTML="<div class='sala_ligado'></div>";
+        // document.getElementById("botao-sala").innerHTML="<button onclick='sala()' class='botao'>Desligar</button>";
+    // } else {
+        document.getElementById("estado_sala").innerHTML="0";
         document.getElementById("sala").innerHTML="<div class='sala_desligado'></div>";
-        document.getElementById("botao-sala").innerHTML="<a href='/?ligar_sala' class='botao'>Liga</a>";
-	    
-    }
-}	
-document.querySelector("#botao-sala").addEventListener("click", ev => {
-  ev.preventDefault();
-  alert("Você não será redirecionado.")
-});
+        document.getElementById("botao-sala").innerHTML="<button onclick='ligar_sala()' class='botao'>Liga</button>";
+    // }
+
+    window.history.replaceState('', '', '/?desligar_sala');
+}
+
+function ligar_sala(){
+    document.getElementById("estado_sala").innerHTML="1";
+    document.getElementById("sala").innerHTML="<div class='sala_ligado'></div>";
+    document.getElementById("botao-sala").innerHTML="<button onclick='sala()' class='botao'>Desligar</button>";
+
+    window.history.replaceState('', '', '/?ligar_sala');
+}
 
 function banheiro1(){
     var estado_banheiro1 = document.getElementById("estado_banheiro1").innerHTML;
