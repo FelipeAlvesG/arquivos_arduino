@@ -81,7 +81,7 @@ function quarto_banheiro2(){
                 var estado_quarto_banheiro2 = document.getElementById("estado_quarto_banheiro2").innerHTML;
                 document.getElementById("estado_quarto_banheiro2").innerHTML="0";
                 document.getElementById("quarto_banheiro2").innerHTML="<div class='quarto_banheiro2_desligado'></div>";
-                document.getElementById("botao-quarto_banheiro2").innerHTML="<button onclick='ligar_quarto_banheiro2()' class='botao'>Liga</button>";
+                document.getElementById("botao-quarto-banheiro2").innerHTML="<button onclick='ligar_quarto_banheiro2()' class='botao'>Liga</button>";
                 if( estado_quarto_banheiro2 == 1 ){
                     window.history.replaceState('', '', '/?desligar_quarto_banheiro2');
                     $.get("/?desligar_quarto_banheiro2").done(function(data){});
@@ -91,7 +91,7 @@ function quarto_banheiro2(){
 function ligar_quarto_banheiro2(){   
                     document.getElementById("estado_quarto_banheiro2").innerHTML="1";
                     document.getElementById("quarto_banheiro2").innerHTML="<div class='quarto_banheiro2_ligado'></div>";
-                    document.getElementById("botao-quarto_banheiro2").innerHTML="<a href='/?desligar_quarto_banheiro2' class='botao'>Desliga</a>";
+                    document.getElementById("botao-quarto-banheiro2").innerHTML="<a href='/?desligar_quarto_banheiro2' class='botao'>Desliga</a>";
                     
                     window.history.replaceState('', '', '/?ligar_quarto_banheiro2');
                     $.get("/?ligar_quarto_banheiro2").done(function(data){});
@@ -101,7 +101,7 @@ function portao(){
                     var estado_portao = document.getElementById("estado_portao").innerHTML;
                     document.getElementById("estado_portao").innerHTML="0";
                     //document.getElementById("portao").innerHTML="<div class='portao_desligado'></div>";
-                    document.getElementById("botao-portao").innerHTML="<button onclick='abrir_portao()' class='botao'>Liga</button>";
+                    document.getElementById("botao-portao").innerHTML="<button onclick='abrir_portao()' class='botao'>Abrir</button>";
                     if( estado_portao == 1 ){
                         window.history.replaceState('', '', '/?fechar_portao');
                         $.get("/?fechar_portao").done(function(data){});
@@ -111,7 +111,7 @@ function portao(){
 function abrir_portao(){   
                         document.getElementById("estado_portao").innerHTML="1";
                         //document.getElementById("portao").innerHTML="<div class='portao_ligado'></div>";
-                        document.getElementById("botao-portao").innerHTML="<a href='/?desligar_portao' class='botao'>Desliga</a>";
+                        document.getElementById("botao-portao").innerHTML="<a href='/?desligar_portao' class='botao'>Fechar</a>";
                         
                         window.history.replaceState('', '', '/?abrir_portao');
                         $.get("/?abrir_portao").done(function(data){});
