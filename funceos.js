@@ -9,8 +9,8 @@ function sala(){
         document.getElementById("sala").innerHTML="<div class='sala_desligado'></div>";
         document.getElementById("botao-sala").innerHTML="<button onclick='ligar_sala()' class='botao'>Liga</button>";
     // }
-
     window.history.replaceState('', '', '/?desligar_sala');
+    $.get("/?desligar_sala").done(function(data){});
 }
 
 function ligar_sala(){
@@ -19,6 +19,7 @@ function ligar_sala(){
     document.getElementById("botao-sala").innerHTML="<button onclick='sala()' class='botao'>Desligar</button>";
 
     window.history.replaceState('', '', '/?ligar_sala');
+    $.get("/?ligar_sala").done(function(data){});
 }
 
 function banheiro1(){
