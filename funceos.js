@@ -1,7 +1,8 @@
 function sala(){
         document.getElementById("estado_sala").value="0";
         document.getElementById("sala").innerHTML="<div class='sala_desligado'></div>";
-        document.getElementById("botao-sala").innerHTML="<a href='/?ligar_sala' onclick='desligarSala()' class='botao'>Liga</a>";
+        document.getElementById("botao-sala").innerHTML="<button onclick='desligarSala()' class='botao'>Liga</button>";
+	$.post("/?ligar_sala").done(function(data){});
 }
 
 function desligarSala(){
