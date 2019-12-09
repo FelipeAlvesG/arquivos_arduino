@@ -1,4 +1,8 @@
-function sala(){
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function sala(){
     await sleep(2000);
 	var estado_sala = document.getElementById("estado_sala").value;
     if(estado_sala === 0){
