@@ -1,17 +1,16 @@
 function sala(){
-    var estado_sala = document.getElementById("estado_sala").value;
-    if(estado_sala == "0"){
-        document.getElementById("estado_sala").value="1";
-        document.getElementById("sala").innerHTML="<div class='sala_ligado'></div>";
-		document.getElementById("botao-sala").innerHTML="<a href='/?desligar_sala' class='botao'>Desliga</a>";
-	    console.log("Desligado");
-    } else {
-	
         document.getElementById("estado_sala").value="0";
         document.getElementById("sala").innerHTML="<div class='sala_desligado'></div>";
-        document.getElementById("botao-sala").innerHTML="<a href='/?ligar_sala' class='botao'>Liga</a>";
-    }console.log("Desligado");
+        document.getElementById("botao-sala").innerHTML="<a href='/?ligar_sala' onclick='desligarSala()' class='botao'>Liga</a>";
 }
+
+function desligarSala(){
+	document.getElementById("estado_sala").value="1";
+        document.getElementById("sala").innerHTML="<div class='sala_ligado'></div>";
+	document.getElementById("botao-sala").innerHTML="<a href='/?desligar_sala' onclick='sala()' class='botao'>Desliga</a>";
+}
+
+
 
 function banheiro1(){
     var estado_banheiro1 = document.getElementById("estado_banheiro1").innerHTML;
