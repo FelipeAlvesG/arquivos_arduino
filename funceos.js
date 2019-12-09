@@ -1,16 +1,14 @@
 function sala(){
-    var estado_sala = document.getElementById("estado_sala").value;
-    if( estado_sala == 0 ){
-        document.getElementById("estado_sala").value="0";
-        document.getElementById("sala").innerHTML="<div class='sala_desligado'></div>";
-        document.getElementById("botao-sala").innerHTML="<a href='/?ligar_sala' class='botao'>Liga </a>";
-    } else {
-        desligarSala();
-    }}
-function desligarSala(){
-	document.getElementById("estado_sala").value="1";
+    var estado_sala = document.getElementById("estado_sala").innerHTML;
+    if(estado_sala === 0){
+        document.getElementById("estado_sala").innerHTML=1;
         document.getElementById("sala").innerHTML="<div class='sala_ligado'></div>";
-	document.getElementById("botao-sala").innerHTML="<a href='/?desligar_sala' onclick='sala()' class='botao'>Desliga</a>";
+        document.getElementById("botao-sala").innerHTML="<a href='/?desligar_sala' class='botao'>Desliga</a>";
+    } else {
+        document.getElementById("estado_sala").innerHTML=0;
+        document.getElementById("sala").innerHTML="<div class='sala_desligado'></div>";
+        document.getElementById("botao-sala").innerHTML="<a href='/?ligar_sala' class='botao'>Liga</a>";
+    }
 }	
 
 function banheiro1(){
