@@ -1,18 +1,14 @@
 function sala(){
-    // var estado_sala = document.getElementById("estado_sala").innerHTML;
-    // if(estado_sala === "0"){
-        // document.getElementById("estado_sala").innerHTML="0";
-        // document.getElementById("sala").innerHTML="<div class='sala_ligado'></div>";
-        // document.getElementById("botao-sala").innerHTML="<button onclick='sala()' class='botao'>Desligar</button>";
-    // } else {
-        document.getElementById("estado_sala").innerHTML="0";
-        document.getElementById("sala").innerHTML="<div class='sala_desligado'></div>";
-        document.getElementById("botao-sala").innerHTML="<button onclick='ligar_sala()' class='botao'>Liga</button>";
-    // }
-    window.history.replaceState('', '', '/?desligar_sala');
-    $.get("/?desligar_sala").done(function(data){});
-}
+    var estado_sala = document.getElementById("estado_sala").innerHTML;
 
+    document.getElementById("estado_sala").innerHTML="0";
+    document.getElementById("sala").innerHTML="<div class='sala_desligado'></div>";
+    document.getElementById("botao-sala").innerHTML="<button onclick='ligar_sala()' class='botao'>Liga</button>";
+    if( estado_sala == 0 ){
+        window.history.replaceState('', '', '/?desligar_sala');
+        $.get("/?desligar_sala").done(function(data){});
+    }
+}
 function ligar_sala(){
     document.getElementById("estado_sala").innerHTML="1";
     document.getElementById("sala").innerHTML="<div class='sala_ligado'></div>";
