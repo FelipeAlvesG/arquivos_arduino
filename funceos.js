@@ -6,8 +6,12 @@ function sala(){
         document.getElementById("botao-sala").innerHTML="<a href='/?ligar_sala' class='botao'>Liga </a>";
     } else {
         desligarSala();
-    }
-
+    }}
+function desligarSala(){
+	document.getElementById("estado_sala").value="1";
+        document.getElementById("sala").innerHTML="<div class='sala_ligado'></div>";
+	document.getElementById("botao-sala").innerHTML="<a href='/?desligar_sala' onclick='sala()' class='botao'>Desliga</a>";
+}	
 
 function banheiro1(){
     var estado_banheiro1 = document.getElementById("estado_banheiro1").innerHTML;
