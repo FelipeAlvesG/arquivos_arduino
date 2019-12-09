@@ -4,7 +4,7 @@ function sala(){
     document.getElementById("estado_sala").innerHTML="0";
     document.getElementById("sala").innerHTML="<div class='sala_desligado'></div>";
     document.getElementById("botao-sala").innerHTML="<button onclick='ligar_sala()' class='botao'>Liga</button>";
-    if( estado_sala == 0 ){
+    if( estado_sala == 1 ){
         window.history.replaceState('', '', '/?desligar_sala');
         $.get("/?desligar_sala").done(function(data){});
     }
