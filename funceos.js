@@ -80,7 +80,7 @@ function ligar_jardim(){
 function quarto_banheiro2(){
                 var estado_quarto_banheiro2 = document.getElementById("estado_quarto_banheiro2").innerHTML;
                 document.getElementById("estado_quarto_banheiro2").innerHTML="0";
-                document.getElementById("quarto_banheiro2").innerHTML="<div class='quarto_banheiro2_desligado'></div>";
+                document.getElementById("quarto_banheiro2").innerHTML="<div class='quarto-banheiro2_desligado'></div>";
                 document.getElementById("botao-quarto-banheiro2").innerHTML="<button onclick='ligar_quarto_banheiro2()' class='botao'>Liga</button>";
                 if( estado_quarto_banheiro2 == 1 ){
                     window.history.replaceState('', '', '/?desligar_quarto_banheiro2');
@@ -90,7 +90,7 @@ function quarto_banheiro2(){
             
 function ligar_quarto_banheiro2(){   
                     document.getElementById("estado_quarto_banheiro2").innerHTML="1";
-                    document.getElementById("quarto_banheiro2").innerHTML="<div class='quarto_banheiro2_ligado'></div>";
+                    document.getElementById("quarto_banheiro2").innerHTML="<div class='quarto-banheiro2_ligado'></div>";
                     document.getElementById("botao-quarto-banheiro2").innerHTML="<a href='/?desligar_quarto_banheiro2' class='botao'>Desliga</a>";
                     
                     window.history.replaceState('', '', '/?ligar_quarto_banheiro2');
