@@ -12,6 +12,10 @@ function sala(){
 	    
     }
 }	
+document.querySelector("#botao-sala").addEventListener("click", ev => {
+  ev.preventDefault();
+  alert("Você não será redirecionado.")
+});
 
 function banheiro1(){
     var estado_banheiro1 = document.getElementById("estado_banheiro1").innerHTML;
