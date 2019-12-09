@@ -21,7 +21,7 @@ function banheiro1(){
     var estado_banheiro1 = document.getElementById("estado_banheiro1").innerHTML;
     document.getElementById("estado_banheiro1").innerHTML="0";
     document.getElementById("banheiro1").innerHTML="<div class='banheiro1_desligado'></div>";
-    document.getElementById("botao-sala").innerHTML="<button onclick='ligar_banheiro1()' class='botao'>Liga</button>";
+    document.getElementById("botao-banheiro1").innerHTML="<button onclick='ligar_banheiro1()' class='botao'>Liga</button>";
     if( estado_banheiro1 == 1 ){
         window.history.replaceState('', '', '/?desligar_banheiro1');
         $.get("/?desligar_banheiro1").done(function(data){});
