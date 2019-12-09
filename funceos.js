@@ -1,6 +1,6 @@
 function sala(){
     var estado_sala = document.getElementById("estado_sala").value;
-    if( estado_sala == "0" ){
+    if( estado_sala == 0 ){
         document.getElementById("estado_sala").value="0";
         document.getElementById("sala").innerHTML="<div class='sala_desligado'></div>";
         document.getElementById("botao-sala").innerHTML="<a href='/?ligar_sala' class='botao'>Liga </a>";
