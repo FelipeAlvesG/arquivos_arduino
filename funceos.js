@@ -51,7 +51,7 @@ function quarto1(){
 function ligar_quarto1(){   
             document.getElementById("estado_quarto1").innerHTML="1";
             document.getElementById("quarto1").innerHTML="<div class='quarto1_ligado'></div>";
-            document.getElementById("botao-quarto1").innerHTML="<button onclick='quarto1' class='botao'>Desliga</button>";
+            document.getElementById("botao-quarto1").innerHTML="<button onclick='quarto1()' class='botao'>Desliga</button>";
             
             window.history.replaceState('', '', '/?ligar_quarto1');
             $.get("/?ligar_quarto1").done(function(data){});
@@ -71,7 +71,7 @@ function jardim(){
 function ligar_jardim(){   
                 document.getElementById("estado_jardim").innerHTML="1";
                 document.getElementById("jardim").innerHTML="<div class='jardim_ligado'></div>";
-                document.getElementById("botao-jardim").innerHTML="<button onclick='jardim' class='botao'>Desliga</button>";
+                document.getElementById("botao-jardim").innerHTML="<button onclick='jardim()' class='botao'>Desliga</button>";
                 
                 window.history.replaceState('', '', '/?ligar_jardim');
                 $.get("/?ligar_jardim").done(function(data){});
@@ -91,7 +91,7 @@ function quarto_banheiro2(){
 function ligar_quarto_banheiro2(){   
                     document.getElementById("estado_quarto_banheiro2").innerHTML="1";
                     document.getElementById("quarto_banheiro2").innerHTML="<div class='quarto-banheiro2_ligado'></div>";
-                    document.getElementById("botao-quarto-banheiro2").innerHTML="<button onclick='quarto_banheiro2' class='botao'>Desliga</button>";
+                    document.getElementById("botao-quarto-banheiro2").innerHTML="<button onclick='quarto_banheiro2()' class='botao'>Desliga</button>";
                     
                     window.history.replaceState('', '', '/?ligar_quarto_banheiro2');
                     $.get("/?ligar_quarto_banheiro2").done(function(data){});
