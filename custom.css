@@ -33,72 +33,72 @@ body {
 }
 
 div.sala_ligado {
-    width: 103px;
-    height: 109px;
+    width: 85px;
+    height: 100px;
     border: none;
 		margin:auto;
     background: url(lampada_ligada.png) no-repeat left top;
 }
 
 div.sala_desligado {
-    width: 103px;
-    height: 109px;
+    width: 85px;
+    height: 100px;
     border: none;
 	background: url(lampada_desligada.png) no-repeat left top;
 }
 
 div.banheiro1_ligado {
-    width: 103px;
-    height: 109px;
+    width: 85px;
+    height: 100px;
     border: none;
     background: url(lampada_ligada.png) no-repeat left top;
 }
 
 div.banheiro1_desligado {
-    width: 103px;
-    height: 109px;
+    width: 85px;
+    height: 100px;
     border: none;
 	background: url(lampada_desligada.png) no-repeat left top;
 }
 
 div.quarto1_ligado {
-    width: 103px;
-    height: 109px;
+    width: 85px;
+    height: 100px;
     border: none;
     background: url(lampada_ligada.png) no-repeat left top;
 }
 
 div.quarto1_desligado {
-    width: 103px;
-    height: 109px;
+    width: 85px;
+    height: 100px;
     border: none;
 	background: url(lampada_desligada.png) no-repeat left top;
 }
 
 div.jardim_ligado {
-    width: 103px;
-    height: 109px;
+    width: 85px;
+    height: 100px;
     border: none;
     background: url(lampada_ligada.png) no-repeat left top;
 }
 
 div.jardim_desligado {
-    width: 103px;
-    height: 109px;
+    width: 85px;
+    height: 100px;
     border: none;
 	background: url(lampada_desligada.png) no-repeat left top;
 }
 
 div.quarto-banheiro2_ligado {
-    width: 103px;
-    height: 109px;
+    width: 85px;
+    height: 100px;
     border: none;
     background: url(lampada_ligada.png) no-repeat left top;
 }
 
 div.quarto-banheiro2_desligado {
-    width: 103px;
-    height: 109px;
+    width: 85px;
+    height: 100px;
     border: none;
 	background: url(lampada_desligada.png) no-repeat left top;
 }
@@ -192,7 +192,18 @@ div.quarto-banheiro2_desligado {
         text-align: center;
 }
 
-}.botao_2:active {
+.botao_2:active {
 	position:relative;
 	top:1px;
+}
+
+.temperatura-externa {
+    float: left;
+    font-size: 21px;
+    font-weight: 700;
+}
+.temperatura-interna {
+    text-align: right;
+    font-size: 21px;
+    font-weight: 700;
 }
